@@ -1,7 +1,7 @@
 local Library = loadstring(game:HttpGet('https://raw.githubusercontent.com/Loco-CTO/UI-Library/main/VisionLibV2/source.lua'))()
 
 Window = Library:Create({
-	Name = "Axafy Gui",
+	Name = "Axafy FREE Gui",
 	Footer = "by 1yyz",
 	ToggleKey = Enum.KeyCode.RightShift,
 	LoadedCallback = function()
@@ -102,9 +102,41 @@ local Button = Section1:Button({
 	end
 })
 
+local Section1 = Tab:Section({
+	Name = "Lunax Hub"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Alexisisback/Universall/refs/heads/main/Testblade.lua", true))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Section1 = Tab:Section({
+	Name = "Fade Hub"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Akirascripts/Lunar/refs/heads/main/LuanrOnTop"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
 local Tab = Window:Tab({
 	Name = "Da Hood",
-	Icon = "rbxassetid://92153084773282",
+	Icon = "rbxassetid://91824404097371",
 	Color = Color3.new(1, 0, 0)
 })
 
@@ -121,6 +153,35 @@ local Button = Section1:Button({
 			Icon = "rbxassetid://11401835376",
 			Duration = 3
 		})
+	end
+})
+
+local Section1 = Tab:Section({
+	Name = "Omen Hub key (codersocks.xyz)"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/mezzopera/Omen-Hub/main/omen_hub.lua"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Section1 = Tab:Section({
+	Name = "sets ( THE DROPDOWN WONT AFFECT ANYTHING ITS THE SETS FOR YOUR PING)"
+})
+
+local Dropdown = Section1:Dropdown({
+	Name = "Sets",
+	Items = { "20 ping = 0.11", "40 ping = 0.11640 0.125 0.10070 0.10645 0.10734 0.10734 0.10734 0.10734 0.10734 0.10898 0.10929 0.10481 0.11152", "50-70 = 0.12337 0.12533 0.11243 0.11137", "80 ping = 0.165", "70-90 = 0.134379 0.14333 0.1433431 0.134143 0.1357", "140-170 ping = 0.16 0.15 0.1223333 0.125333 0.16779123 0.165455312399999", "200-300 ping = 0.1746 0.1567 0.1654 0.18321 0.1456 0.165561 0.12194 0.1651"},
+	Callback = function(item)
+		print(typeof(item))
+		print(item)
 	end
 })
 
@@ -146,6 +207,59 @@ local Button = Section1:Button({
 	end
 })
 
+local Section1 = Tab:Section({
+	Name = "Quotas Hub"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/Insertl/QuotasHub/main/BETAv1.3"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Tab = Window:Tab({
+	Name = "Blox Fruits",
+	Icon = "rbxassetid://92153084773282",
+	Color = Color3.new(1, 0, 0)
+})
+
+local Section1 = Tab:Section({
+	Name = "Gui"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://gitlab.com/littlekiller2927/deltacore/-/raw/main/deltabf.lua"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Section1 = Tab:Section({
+	Name = "mama hub"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/MAMAhub1/Mmahub/main/README.md"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
 
 local Tab = Window:Tab({
 	Name = "Main",
@@ -154,12 +268,31 @@ local Tab = Window:Tab({
 })
 
 local Section1 = Tab:Section({
-	Name = "Basic controls"
+	Name = "General"
 })
 
 local Button = Section1:Button({
-	Name = "Button",
-	Callback = function()
+	Name = "Trash Talk",
+	Callback = function()local words = {
+    'ur bad',
+    'seed',
+    'im not locking ur just bad',
+    'kid im not locking XDXDXDXD ur just bad',
+    'sad',
+    'sonned',
+    'how did u fail to get me',
+}
+
+local player = game.Players.LocalPlayer
+local keybind = 'y'
+
+local event = game.ReplicatedStorage.DefaultChatSystemChatEvents.SayMessageRequest
+
+player:GetMouse().KeyDown:connect(function(key)
+    if key == keybind then
+        event:FireServer(words[math.random(#words)], "All")
+    end
+end)
 		Library:Notify({
 			Name = "Button",
 			Text = "Clicked",
@@ -169,27 +302,25 @@ local Button = Section1:Button({
 	end
 })
 
-local Toggle = Section1:Toggle({
-	Name = "Toggle",
-	Default = false,
-	Callback = function(Bool) 
+local Button = Section1:Button({
+	Name = "Fake Lim (V)",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/y10ko/Niggaless/main/FE%20Headless%20%26%20Korblox",true))()
 		Library:Notify({
-			Name = "Toggle",
-			Text = tostring(Bool),
+			Name = "Button",
+			Text = "Clicked",
 			Icon = "rbxassetid://11401835376",
 			Duration = 3
 		})
 	end
 })
-
 
 local Section1 = Tab:Section({
-	Name = "Basic controls"
+	Name = "ESP"
 })
 
 local Button = Section1:Button({
-	Name = "Button",
-	Callback = function()
+	Name = "Esp Tracer",
+	Callback = function()loadstring(game:HttpGet("https://pastebin.com/raw/c4FNAXCW"))()
 		Library:Notify({
 			Name = "Button",
 			Text = "Clicked",
@@ -199,13 +330,36 @@ local Button = Section1:Button({
 	end
 })
 
-local Toggle = Section1:Toggle({
-	Name = "Toggle",
-	Default = false,
-	Callback = function(Bool) 
+local Button = Section1:Button({
+	Name = "Esp Box",
+	Callback = function()loadstring(game:HttpGet("https://pastebin.com/raw/Cx4B9rNd"))()
 		Library:Notify({
-			Name = "Toggle",
-			Text = tostring(Bool),
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Button = Section1:Button({
+	Name = "Esp Health",
+	Callback = function()loadstring(game:HttpGet("https://pastebin.com/raw/nq27eCVX"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Button = Section1:Button({
+	Name = "Esp Name",
+	Callback = function()loadstring(game:HttpGet("https://pastebin.com/raw/Nj4dG8CZ"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
 			Icon = "rbxassetid://11401835376",
 			Duration = 3
 		})
@@ -213,70 +367,27 @@ local Toggle = Section1:Toggle({
 })
 
 local Section2 = Tab:Section({
-	Name = "Advance controls"
-})
-
-local Slider = Section2:Slider({
-	Name = "Slider",
-	Max = 50,
-	Min = 0,
-	Default = 25,
-	Callback = function(Number)
-		Library:Notify({
-			Name = "Slider",
-			Text = tostring(Number),
-			Icon = "rbxassetid://11401835376",
-			Duration = 3
-		})
-	end
-})
-
-local Keybind = Section2:Keybind({
-	Name = "Keybind",
-	Default = Enum.KeyCode.Return,
-	Callback = function()
-		Library:Notify({
-			Name = "Keybind pressed",
-			Text = "Idk sth here",
-			Icon = "rbxassetid://11401835376",
-			Duration = 3,
-		})
-	end,
-	UpdateKeyCallback = function(Key)
-		Library:Notify({
-			Name = "Keybind updated",
-			Text = tostring(Key),
-			Icon = "rbxassetid://11401835376",
-			Duration = 3,
-		})
-	end
-})
-
-local SmallTextbox = Section2:SmallTextbox({
-	Name = "Small Textbox",
-	Default = "Default Text",
-	Callback = function(Text)
-		Library:Notify({
-			Name = "Small Textbox updated",
-			Text = Text,
-			Icon = "rbxassetid://11401835376",
-			Duration = 3,
-		})
-	end
-})
-
-local Dropdown = Section2:Dropdown({
-	Name = "Dropdown",
-	Items = {1, 2, 3, 4, "XD"},
-	Callback = function(item)
-		print(typeof(item))
-		print(item)
-	end
+	Name = "More General"
 })
 
 local Button = Section2:Button({
-	Name = "Clear dropdown",
-	Callback = function()
+	Name = "Anti Fling",
+	Callback = function()local localPlayer = game:GetService('Players').LocalPlayer;
+                local localCharacter = localPlayer.Character;
+                localCharacter:FindFirstChildOfClass('Humanoid').Health = 0;
+                local newCharacter = localPlayer.CharacterAdded:Wait();
+                local spoofFolder = Instance.new('Folder');
+                spoofFolder.Name = 'FULLY_LOADED_CHAR';
+                spoofFolder.Parent = newCharacter;
+                newCharacter:WaitForChild('RagdollConstraints'):Destroy();
+                local spoofValue = Instance.new('BoolValue', newCharacter);
+                spoofValue.Name = 'RagdollConstraints';
+                local name = game.Players.LocalPlayer.Name
+                local lol =    game.Workspace:WaitForChild(name)
+                local money = Instance.new("Folder",game.Players.LocalPlayer.Character);money.Name = "FULLY_LOADED_CHAR"
+                lol.Parent = game.Workspace.Players
+                game.Players.LocalPlayer.Character:WaitForChild("BodyEffects")
+                game.Players.LocalPlayer.Character.BodyEffects.BreakingParts:Destroy()
 		Dropdown:Clear()
 	end
 })
