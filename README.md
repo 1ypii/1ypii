@@ -223,6 +223,23 @@ local Button = Section1:Button({
 	end
 })
 
+local Section1 = Tab:Section({
+	Name = "Tbao Hub"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/tbao143/thaibao/main/TbaoHubArsenal"))("https://t.me/KrutoySuslik")
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+
 local Tab = Window:Tab({
 	Name = "Blox Fruits",
 	Icon = "rbxassetid://92153084773282",
@@ -262,6 +279,44 @@ local Button = Section1:Button({
 })
 
 local Tab = Window:Tab({
+	Name = "Rivals",
+	Icon = "rbxassetid://91824404097371",
+	Color = Color3.new(1, 0, 0)
+})
+
+local Section1 = Tab:Section({
+	Name = "25ms"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/cracklua/cracks/m/SilentRivals"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Section1 = Tab:Section({
+	Name = "God Hub (BEST WORKING not mine)"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://scriptblox.com/raw/UPD-RIVALS-OP-UPDATE-God-Hub-Silent-Aim-Chams-Undetected-Best-Script-17850"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Tab = Window:Tab({
 	Name = "Main",
 	Icon = "rbxassetid://11396131982",
 	Color = Color3.new(1, 0, 0)
@@ -272,7 +327,7 @@ local Section1 = Tab:Section({
 })
 
 local Button = Section1:Button({
-	Name = "Trash Talk",
+	Name = "Trash Talk (y)",
 	Callback = function()local words = {
     'ur bad',
     'seed',
@@ -393,19 +448,28 @@ local Button = Section2:Button({
 })
 
 local Button = Section2:Button({
-	Name = "Update dropdown",
-	Callback = function()
-		Dropdown:UpdateList({
-			Items = {"bruh", 1, 2, 3},
-			Replace = true
+	Name = "Rainbow Character",
+	Callback = function()for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+    if v:IsA("MeshPart") then
+        v.Material = "ForceField"
+        spawn(function()
+            while wait() do
+                for i, v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                    if v:IsA("MeshPart") then
+                        v.Color = Color3.fromHSV(tick()%5/5,1,1)
+                        wait()
+                    end
+                end 
+            end
+        end)
+    end
+end
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
 		})
-	end
-})
-
-local Button = Section2:Button({
-	Name = "Additem",
-	Callback = function()
-		Dropdown:AddItem("Item")
 	end
 })
 
