@@ -136,8 +136,24 @@ local Button = Section1:Button({
 
 local Tab = Window:Tab({
 	Name = "Da Hood",
-	Icon = "rbxassetid://91824404097371",
+	Icon = "rbxassetid://14134686133",
 	Color = Color3.new(1, 0, 0)
+})
+
+local Section1 = Tab:Section({
+	Name = "Omen Hub key (codersocks.xyz)"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/mezzopera/Omen-Hub/main/omen_hub.lua"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
 })
 
 local Section1 = Tab:Section({
@@ -157,12 +173,12 @@ local Button = Section1:Button({
 })
 
 local Section1 = Tab:Section({
-	Name = "Omen Hub key (codersocks.xyz)"
+	Name = "Camlock (OP)"
 })
 
 local Button = Section1:Button({
 	Name = "Execute",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/mezzopera/Omen-Hub/main/omen_hub.lua"))()
+	Callback = function()loadstring(game:HttpGet("https://pastebin.com/raw/saz1c3k8"))()
 		Library:Notify({
 			Name = "Button",
 			Text = "Clicked",
@@ -280,7 +296,7 @@ local Button = Section1:Button({
 
 local Tab = Window:Tab({
 	Name = "Rivals",
-	Icon = "rbxassetid://91824404097371",
+	Icon = "rbxassetid://92029816021311",
 	Color = Color3.new(1, 0, 0)
 })
 
@@ -307,6 +323,28 @@ local Section1 = Tab:Section({
 local Button = Section1:Button({
 	Name = "Execute",
 	Callback = function()loadstring(game:HttpGet("https://scriptblox.com/raw/UPD-RIVALS-OP-UPDATE-God-Hub-Silent-Aim-Chams-Undetected-Best-Script-17850"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Tab = Window:Tab({
+	Name = "Combat Warriors",
+	Icon = "rbxassetid://10012196756",
+	Color = Color3.new(1, 0, 0)
+})
+
+local Section1 = Tab:Section({
+	Name = "Stratos Hub"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://pastefy.app/50B4Z9UK/raw"))()
 		Library:Notify({
 			Name = "Button",
 			Text = "Clicked",
