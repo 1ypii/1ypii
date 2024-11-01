@@ -23,7 +23,7 @@ Notify({
     Title = " 1yyz is discord";
     Duration = 5;
     });
-    
+
 Window:ChangeTogglekey(Enum.KeyCode.RightShift)
 
 local Tab = Window:Tab({
@@ -38,7 +38,7 @@ local Section1 = Tab:Section({
 
 local Button = Section1:Button({
 	Name = "Execute",
-	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/PawsThePaw/Plutonium.AA/main/Plutonium.Loader.lua", true))()
+	Callback = function()loadstring(game:HttpGet("httpds://raw.githubusercontent.com/PawsThePaw/Plutonium.AA/main/Plutonium.Loader.lua", true))()
 		Library:Notify({
 			Name = "Button",
 			Text = "Clicked",
@@ -564,6 +564,37 @@ end
 	end
 })
 
+local Section1 = Tab:Section({
+	Name = "Sans CC (dont use silent)"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://rentry.co/chr674si/raw/"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
+
+local Section1 = Tab:Section({
+	Name = "Carl Camlock (OP)"
+})
+
+local Button = Section1:Button({
+	Name = "Execute",
+	Callback = function()loadstring(game:HttpGet("https://raw.githubusercontent.com/28asjdjasdkj/adsadasdw234dasd/refs/heads/main/GODISGREAT"))()
+		Library:Notify({
+			Name = "Button",
+			Text = "Clicked",
+			Icon = "rbxassetid://11401835376",
+			Duration = 3
+		})
+	end
+})
 
 local Section1 = Tab:Section({
 	Name = "sets ( THE DROPDOWN WONT AFFECT ANYTHING ITS THE SETS FOR YOUR PING)"
