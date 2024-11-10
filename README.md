@@ -1,6 +1,6 @@
 local Fun = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/nightmares.fun-UI-Library/main/source.lua"))()
 
-local window = Fun.Create("Axafy Free")
+local window = Fun.Create("Axafy BETA")
 
 local tab = window:Tab("Main")
 
@@ -2064,9 +2064,18 @@ local section = tab:Section("God Hub")
 section:Button("Button", function()loadstring(game:HttpGet("https://raw.githubusercontent.com/cracklua/cracks/m/SilentRivals"))()
 end)
 
-local tab = window:Tab("Combat Warriors")
+local notificationLibrary = loadstring(game:HttpGet("https://raw.githubusercontent.com/laagginq/ui-libraries/main/xaxas-notification/src.lua"))();
+local notifications = notificationLibrary.new({            
+    NotificationLifetime = 3, 
+    NotificationPosition = "Middle",
+    
+    TextFont = Enum.Font.Code,
+    TextColor = Color3.fromRGB(255, 255, 255),
+    TextSize = 15,
+    
+    TextStrokeTransparency = 0, 
+    TextStrokeColor = Color3.fromRGB(0, 0, 0)
+});
 
-local section = tab:Section("Stratos Hub")
-
-section:Button("Button", function()loadstring(game:HttpGet("https://pastefy.app/50B4Z9UK/raw"))()
-end)
+notifications:BuildNotificationUI();
+notifications:Notify("add 1yyz to stay tuned for updated version");
